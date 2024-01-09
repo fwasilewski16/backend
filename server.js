@@ -13,6 +13,6 @@ app.use("/encore", encoreRoutes);
 
 mongoose.connect(process.env.MONG_URI, { dbName: "portfolioBackend" })
     .then(
-        app.listen(process.env.PORT, () => { console.log("Started"); })
+        app.listen(process.env.PORT, "0.0.0.0", () => { console.log("Started"); })
     )
     .catch(error => console.log(error));
